@@ -49,6 +49,10 @@ html {
     color: #1F1F1F;
     background-color: #FFFFFF;
 }
+body {
+    /* Sätt lagom radavstånd för text */
+    line-height: 130%;
+}
 h1, h2, h3 {
     margin-top: 1.1em;
     margin-bottom:1.0em;
@@ -187,6 +191,7 @@ h3 {
     box-sizing: border-box;
 }
 .rad {
+    display: flex; /* Låt kolumumner fylla upp hela raden */
     margin: auto;
     max-width: 80%;
 }
