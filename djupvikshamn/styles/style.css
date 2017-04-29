@@ -43,13 +43,20 @@ table {
 	border-spacing: 0;
 }
 
-/* Generella font- och färginställnigar */
+/* Låt sidan fylla hela viewporten */
+html, body {
+    min-height: 100%;
+    height: 100%;
+}
 html {
+    /* Generella font- och färginställnigar */
     font-family: 'Fjalla One', sans-serif;
     color: #1F1F1F;
     background-color: #FFFFFF;
 }
 body {
+    display: flex;
+    flex-direction: column;
     /* Sätt lagom radavstånd för text */
     line-height: 130%;
 }
@@ -68,9 +75,19 @@ h3 {
     font-size: 120%;
 }
 
+/* Använd flexbox för layout på sidans huvudsektioner */
+.sidhuvud, .navigering, .innehall, .sidfot {
+    display: flex;
+}
+/* Centrera innehåll i vissa sektioner */
+.navigering, .sidfot {
+    justify-content: center;
+}
+
 /* Definitioner för header för att få namnet centrerat med bakgrungsfärg
    samt att skala bilden så att den täcker skärmens bredd med rätt proportioner*/
 .sidhuvud {
+    order: 1;
     position: relative;
 }
 .sidhuvud img {
@@ -113,13 +130,6 @@ h3 {
     width: 90%;
     padding: 5px;
 }
-.bildgalleri figcaption {
-    display: block;
-    margin: auto;
-    width: 90%;
-    padding: 5px;
-}
-
 /* Centrera bild och bildtext i artikel 
    samt lägg lite mellanrum runt bilden */
 .artikelbild {
@@ -127,36 +137,29 @@ h3 {
     justify-content: center;
     padding: 20px;
 }
-.artikelbild figcaption {
-    display: flex;
-    justify-content: center;
+/* Bildtexter centrerat fyll upp 90% av bredden */
+.bildgalleri figcaption, .artikelbild figcaption {
+    text-align: center;
+    margin: auto;
+    max-width: 90%;
 }
 
 /* Tabell med medlemsregistret ska ha linjer mellan
    cellerna och fetstil på kolumnrubrikerna */
+.medlemstabell tr, .medlemstabell td, .medlemstabell th {
+    border: solid 1px #cdc9c5;
+    padding: 5px;
+    text-align: left;
+}
 .medlemstabell th {
     border: solid 2px #cdc9c5;
     font-weight: bold;
-    padding: 5px;
-    text-align: left;
 }
-.medlemstabell tr {
-    border: solid 1px #cdc9c5;
-    padding: 5px;
-    text-align: left;
-}
-.medlemstabell td {
-    border: solid 1px #cdc9c5;
-    padding: 5px;
-    text-align: left;
-}
-
 
 /* Definitioner för utseende och beteende för navigeringsmenyn
    Visa listan med navigeringsalternativ centrerat och horisontellt */
 .navigering {
-    display: flex;
-    justify-content: center;
+    order: 2;
 }
 .navigering ul {
     list-style: none;
@@ -178,13 +181,16 @@ h3 {
 
 /* Sätt bakgrund och marginal i innehållsdelen av varje sida */
 .innehall {
+    /* Låt innehåll fylla upp sidans höjd */
+    flex: 1;
+    order: 3;
     background-image: url("../images/layout/body-pattern.jpeg");
     padding: 20px;
 }
 
 /* Definitioner för utseende och beteende för footer */
 .sidfot {
-    text-align: center;
+    order: 4;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
@@ -197,46 +203,36 @@ h3 {
  */
  .rad, 
 .kolumn {
+    margin: auto;
     box-sizing: border-box;
 }
 .rad {
-    display: flex; /* Låt kolumumner fylla upp hela raden */
+    display: flex;
     margin: auto;
     max-width: 80%;
-}
-/* Clear-fix för att innehåll inte ska hamna fel i rutsystemet */
-.rad:before,
-.rad:after {
-    content: "";
-    display: table;
-}
-.rad:after {
-    clear: both;
+    width: 80%;
 }
 /* Generellt utseende och beteende för en kolumn */ 
 .kolumn {
-    position: relative;
-    float: left;
     border-radius: 4px;
-    padding: 10px;
+    /* Lämna mellanrum mellan kolumner */
+    padding: 5px;
+    margin: 5px;
     background-color: #FFFFFF;
     border-top: 5px solid #FFA500;
 }
-/* Lämna mellanrum mellan kolumner */
-.kolumn + .kolumn {
-    margin-left: 1.6%;
-}
+
 /* Vi har max tre kolumner i rutsystemet. De olika kolumn typer som finns är
-   en kolumn-3 täcker hela raden medans
-   en kolumn-2 täcker två-tredjedelar minus mellan rum och
-   en kolumn-1 täcker en tredjedel minus två mellanrum
+   en kolumn-3 täcker hela raden (används ensam) medans
+   en kolumn-2 täcker två-tredjedelar (används tillsammans kolumn 1) och
+   en kolumn-1 täcker en tredjedel (används tillsammans med kolumn-2)
 */
 .kolumn-1 {
-    width: 32.27%;
+    flex: 1;
 }
 .kolumn-2 {
-    width: 66.13%;
+    flex: 2;
 }
 .kolumn-3 {
-    width: 100%;
+    flex: 1;
 }
