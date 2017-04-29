@@ -1,0 +1,228 @@
+/* Global reset för att få det att se lika 
+   ut i browsers från olika leverantörer */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Generella font- och färginställnigar */
+html {
+    font-family: 'Fjalla One', sans-serif;
+    color: #1F1F1F;
+    background-color: #FFFFFF;
+}
+h1, h2, h3 {
+    margin-top: 1.1em;
+    margin-bottom:1.0em;
+    font-weight: bold;
+}
+h1 {
+    font-size: 130%;
+}
+h2 {
+    font-size: 125%;
+}
+h3 {
+    font-size: 120%;
+}
+
+/* Definitioner för header för att få namnet på rätt plats med bakgrungsfärg */
+.sidhuvudrubrik {
+    position: absolute;
+    height: 100%;
+}
+.sidhuvudrubrik:before {
+   content: '';
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
+}
+.sidhuvud h1 {
+   display: inline-block;
+}
+.sidhuvudrubrikmellanrum, .sidhuvudrubriktext {
+    background: #ADD8E6;
+    padding: 10px;
+}
+.sidhuvudrubrikmellanrum {
+   padding-left: 100px;
+}
+
+/* Datum för en nyhet ska ha lite mer mellanrum till omgivande text än brödtext har */
+.nyhetsdatum {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* Skala bilder och bildtexter (i bildgalleri) till att fylla upp till 90%
+   befintligt utrymme på bredden och behåll bredd- och höjdförhållande */
+.bildgalleri img {
+    display: block;
+    margin: auto;
+    width: 90%;
+    padding: 5px;
+}
+.bildgalleri figcaption {
+    display: block;
+    margin: auto;
+    width: 90%;
+    padding: 5px;
+}
+
+/* Centrera bild och bildtext i artikel 
+   samt lägg lite mellanrum runt bilden */
+.artikelbild {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.artikelbild figcaption {
+    display: flex;
+    justify-content: center;
+}
+
+/* Tabell med medlemsregistret ska ha linjer mellan
+   cellerna och fetstil på kolumnrubrikerna */
+.medlemstabell th {
+    border: solid 2px #cdc9c5;
+    font-weight: bold;
+    padding: 5px;
+    text-align: left;
+}
+.medlemstabell tr {
+    border: solid 1px #cdc9c5;
+    padding: 5px;
+    text-align: left;
+}
+.medlemstabell td {
+    border: solid 1px #cdc9c5;
+    padding: 5px;
+    text-align: left;
+}
+
+
+/* Definitioner för utseende och beteende för navigeringsmenyn
+   Visa listan med navigeringsalternativ centrerat och horisontellt */
+.navigering {
+    display: flex;
+    justify-content: center;
+}
+.navigering ul {
+    list-style: none;
+}
+.navigering li {
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navigering li:hover {
+    background-color: #cdc9c5;
+}
+.aktivnavigering {
+    border-bottom: solid #cdc9c5;
+    border-width: 3px;
+}
+
+/* Sätt bakgrund och marginal i innehållsdelen av varje sida */
+.innehall {
+    background-image: url("../images/layout/body-pattern.jpeg");
+    padding: 20px;
+}
+
+/* Definitioner för utseende och beteende för footer */
+.sidfot {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top: 5px solid #cdc9c5;
+}
+
+/*
+ * Definitioner nedanför för att skapa ett rutsystem
+ */
+ .rad, 
+.kolumn {
+    box-sizing: border-box;
+}
+.rad {
+    margin: auto;
+    max-width: 80%;
+}
+/* Clear-fix för att innehåll inte ska hamna fel i rutsystemet */
+.rad:before,
+.rad:after {
+    content: "";
+    display: table;
+}
+.rad:after {
+    clear: both;
+}
+/* Generellt utseende och beteende för en kolumn */ 
+.kolumn {
+    position: relative;
+    float: left;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-top: 5px solid #FFA500;
+}
+/* Lämna mellanrum mellan kolumner */
+.kolumn + .kolumn {
+    margin-left: 1.6%;
+}
+/* Vi har max tre kolumner i rutsystemet. De olika kolumn typer som finns är
+   en kolumn-3 täcker hela raden medans
+   en kolumn-2 täcker två-tredjedelar minus mellan rum och
+   en kolumn-1 täcker en tredjedel minus två mellanrum
+*/
+.kolumn-1 {
+    width: 32.27%;
+}
+.kolumn-2 {
+    width: 66.13%;
+}
+.kolumn-3 {
+    width: 100%;
+}

@@ -12,27 +12,31 @@
 <head>
     <title>Djupviks Hamn</title>
     <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="headerrubrik">
-            <h1>Djupvik</h1>
+    <header class="sidhuvud">
+        <div class="sidhuvudrubrik">
+            <h1><span class="sidhuvudrubriktext"><span class="sidhuvudrubrikmellanrum"></span>Djupvik</span>
+            </h1>
         </div>
         <img src="images/layout/header.png" alt="Solnedgång över havet" />
     </header>
-    <nav>
-        <a href="index.html">Start</a>
-        <a href="html/info.html">Information</a>
-        <a href="html/guest.html">Gästplatser</a>
-        <a href="html/history.html">Historia</a>
-        <a href="html/contact.html">Kontakt</a>
-        <a href="html/members.html">Medlemsinfo</a>
-        <a href="html/english.html">In English</a>
+    <nav class="navigering">
+        <ul>
+            <li class="aktivnavigering"><a href="index.html">Start</a></li>
+            <li><a href="html/info.html">Information</a></li>
+            <li><a href="html/guest.html">Gästplatser</a></li>
+            <li><a href="html/history.html">Historia</a></li>
+            <li><a href="html/contact.html">Kontakt</a></li>
+            <li><a href="html/members.html">Medlemsinfo</a></li>
+            <li><a href="html/english.html">In English</a></li>
+        </ul>
     </nav>
 
-    <div>
-        <!--
+    <!--
 Vi tänker oss att överst på sidan vill vi ha någon form utav övergripande information. Efter det så
 bör senaste nytt presenteras. Tänkt är att de två senaste nyheterna på sajten visas med rubrik,
 datum och sedan ett utdrag ifrån nyheten. I den andra nyheten “hamn jobb” så vill vi gärna att en
@@ -44,76 +48,78 @@ passande sätt. Kanske att 3 bilder kan passa?
 Förslag på text till bilderna: “En bild säger mer än tusen ord, vi skulle dock behövt
                 många fler bilder för att ge dig en komplett bild utav Djupvik.”
         -->
-        <main>
+    <div class="innehall">
+        <div class="rad">
+            <div class="kolumn kolumn-2">
+                <main>
+                    <p>Djupviks hamn ligger på Gotlands västkust nästan rakt öster om Lilla Karlsö. Hamnen är otroligt vackert
+                        belägen i anslutning till ett gammalt Gotländskt fiskeläge. I hamnen finns under sommarsäsongen en
+                        kiosk med lite av varje. Ett par hundra meter ovanför hamnen ligger Djupviks Hotell, ett hotell med
+                        restaurang och bra standard.</p>
 
-            <p>Djupviks hamn ligger på Gotlands västkust nästan rakt öster om Lilla Karlsö. Hamnen är otroligt vackert belägen
-                i anslutning till ett gammalt Gotländskt fiskeläge. I hamnen finns under sommarsäsongen en kiosk med lite
-                av varje. Ett par hundra meter ovanför hamnen ligger Djupviks Hotell, ett hotell med restaurang och bra standard.</p>
-
-            <section>
-                <header>
-                    <h2>Nyheter</h2>
-                </header>
-                <article>
-                    <header>
-                        <div class="nyhetsrubrik">
-                            <h3>Succé för hamnens dag!</h3>
-                        </div>
-                        <div class="nyhetsdatum">
-                            <time datetime="2016-07-16">16-07-16</time>
-                        </div>
-                    </header>
-                    <p>
-                        <time datetime="2016-07-16">Lördagen den 16 juli</time> arrangerade föreningen Djupviks hamn i Eksta ”Hamnens dag” i Djupvik.
-                        Vårt arbete har med åren alltmer också inriktats på att alla besökare, även de som kommer landvägen
-                        skall trivas i det vackra hamnområdet. Nu bjöds det in till ”Hamnens dag”. På plats fanns sjöfartsverkets
-                        SAR-helikopter, Sjöräddningens båt Hwitstjärna, släckningsbil från räddningstjänsten i Klintehamn,
-                        russ från Gannarve och ett antal loppisförsäljare. Aktiviteten lockade ett stort antal besökare.
-                        Uppskattningsvis 1000 besökare sökte sig under dagen till Djupvik. Intresset var stort för de besökande
-                        organisationerna som informerade och alla fick möjlighet att titta och ställa frågor. Barnen fick
-                        rida, de bjöds på bulle och dricka och många prövade lyckan i fiskdammen. Det fanns möjlighet att
-                        handla kaffe, korv, dricka och glass. Många dröjde sig kvar i hamnområdet och trivdes i det inledningsvis
-                        lite blåsiga men vackra vädret.</p>
-                </article>
-                <article>
-                    <header>
-                        <div class="nyhetsrubrik">
-                            <h3>Hamnjobb</h3>
-                        </div>
-                        <div class="nyhetsdatum">
-                            <time datetime="2016-05-07">16-05-07</time>
-                        </div>
-                    </header>
-                    <p>
-                        <time datetime="2016-05-07">Lördagen den 7 maj</time> samlades ett 15-tal medlemmar för arbete i hamnen. Kiosken, kajerna och
-                        stranden städades. Kajer lagades och gräs brändes. Diverse fix på många håll. Vädret var bra och
-                        korven god. Det som återstår inför säsongen är att ta bort släke från stranden, att sätta upp ramp
-                        vid kiosken och att fylla kiosken med varor.</p>
-                </article>
-            </section>
-        </main>
-
-        <aside>
-            <div>
-                <figure>
-                    <img src="images/boats_in_dock.jpg" alt="Båtar som ligger för ankar i Djupviks hamn" />
-                </figure>
-                <figure>
-                    <img src="images/calmwaters.jpg" alt="Fiskarstugor i Djupviks hamn" />
-                </figure>
-                <figure>
-                    <img src="images/solnedgang.jpg" alt="Solnedgång över Djupviks hamn" />
-                </figure>
+                    <section>
+                        <header>
+                            <h2>Nyheter</h2>
+                        </header>
+                        <article>
+                            <header>
+                                <div class="nyhetsrubrik">
+                                    <h3>Succé för hamnens dag!</h3>
+                                </div>
+                                <div class="nyhetsdatum">
+                                    <time datetime="2016-07-16">16-07-16</time>
+                                </div>
+                            </header>
+                            <p>
+                                <time datetime="2016-07-16">Lördagen den 16 juli</time> arrangerade föreningen Djupviks hamn i Eksta ”Hamnens dag” i
+                                Djupvik. Vårt arbete har med åren alltmer också inriktats på att alla besökare, även de som
+                                kommer landvägen skall trivas i det vackra hamnområdet. Nu bjöds det in till ”Hamnens dag”.
+                                På plats fanns sjöfartsverkets SAR-helikopter, Sjöräddningens båt Hwitstjärna, släckningsbil
+                                från räddningstjänsten i Klintehamn, russ från Gannarve och ett antal loppisförsäljare. Aktiviteten
+                                lockade ett stort antal besökare. Uppskattningsvis 1000 besökare sökte sig under dagen till
+                                Djupvik. Intresset var stort för de besökande organisationerna som informerade och alla fick
+                                möjlighet att titta och ställa frågor. Barnen fick rida, de bjöds på bulle och dricka och
+                                många prövade lyckan i fiskdammen. Det fanns möjlighet att handla kaffe, korv, dricka och
+                                glass. Många dröjde sig kvar i hamnområdet och trivdes i det inledningsvis lite blåsiga men
+                                vackra vädret.</p>
+                        </article>
+                        <article>
+                            <header>
+                                <div class="nyhetsrubrik">
+                                    <h3>Hamnjobb</h3>
+                                </div>
+                                <div class="nyhetsdatum">
+                                    <time datetime="2016-05-07">16-05-07</time>
+                                </div>
+                            </header>
+                            <p>
+                                <time datetime="2016-05-07">Lördagen den 7 maj</time> samlades ett 15-tal medlemmar för arbete i hamnen. Kiosken, kajerna
+                                och stranden städades. Kajer lagades och gräs brändes. Diverse fix på många håll. Vädret
+                                var bra och korven god. Det som återstår inför säsongen är att ta bort släke från stranden,
+                                att sätta upp ramp vid kiosken och att fylla kiosken med varor.</p>
+                        </article>
+                    </section>
+                </main>
             </div>
-            <hr>
-            <p>En bild säger mer än tusen ord, vi skulle dock behövt många fler bilder för att ge dig en komplett bild utav
-                Djupvik.
-            </p>
-        </aside>
+            <div class="kolumn kolumn-1">
+                <aside>
+                    <div class="bildgalleri">
+                        <figure>
+                            <img src="images/boats_in_dock.jpg" alt="Båtar som ligger för ankar i Djupviks hamn" />
+                            <img src="images/calmwaters.jpg" alt="Fiskarstugor i Djupviks hamn" />
+                            <img src="images/solnedgang.jpg" alt="Solnedgång över Djupviks hamn" />
+                            <hr>
+                            <figcaption>En bild säger mer än tusen ord, vi skulle dock behövt många fler bilder för att ge dig en komplett
+                                bild utav Djupvik.</figcaption>
+                        </figure>
+                    </div>
+                </aside>
+            </div>
+        </div>
     </div>
 
-    <footer>
-
+    <footer class="sidfot">
+        <p>Är du medlem i hamnföreningen och inte har tillgång till medlemssidan? Skicka e-post till sekreteraren <a href="mailto:info@djupvikshamn.se">(info@djupvikshamn.se)</a></p>
     </footer>
 </body>
 

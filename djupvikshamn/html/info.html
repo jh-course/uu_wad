@@ -12,53 +12,68 @@
 <head>
     <title>Djupviks Hamn</title>
     <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="headerrubrik">
-            <h1>Djupvik</h1>
+    <header class="sidhuvud">
+        <div class="sidhuvudrubrik">
+            <h1><span class="sidhuvudrubriktext"><span class="sidhuvudrubrikmellanrum"></span>Djupvik</span>
+            </h1>
         </div>
         <img src="../images/layout/header.png" alt="Solnedgång över havet" />
     </header>
-    <nav>
-        <a href="../index.html">Start</a>
-        <a href="info.html">Information</a>
-        <a href="guest.html">Gästplatser</a>
-        <a href="history.html">Historia</a>
-        <a href="contact.html">Kontakt</a>
-        <a href="members.html">Medlemsinfo</a>
-        <a href="english.html">In English</a>
+    <nav class="navigering">
+        <ul>
+            <li><a href="../index.html">Start</a></li>
+            <li class="aktivnavigering"><a href="info.html">Information</a></li>
+            <li><a href="guest.html">Gästplatser</a></li>
+            <li><a href="history.html">Historia</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="members.html">Medlemsinfo</a></li>
+            <li><a href="english.html">In English</a></li>
+        </ul>
     </nav>
 
-    <main>
-        <!--
+    <div class="innehall">
+        <div class="rad">
+            <div class="kolumn kolumn-3">
+                <main>
+                    <!--
 Här tänker vi oss minst två bilder som visar på något som går att göra i djupvik samt text som
 nämner lite om vad som finns i närheten.
 -->
-        <p>Hamnen och det gamla fiskeläget ligger med utsikt över både Lilla Karlsö och Stora Karlsö. Kuststräckan söder om
-            Djupvik, den s.k. Ekstakusten, är otroligt vacker och inbjuder till härliga turer med bil, cykel eller till fots.
-            Omedelbart norr om hamnen ligger en fin sandstrand som lämpar sig väl för bad.</p>
+                    <p>Hamnen och det gamla fiskeläget ligger med utsikt över både Lilla Karlsö och Stora Karlsö. Kuststräckan
+                        söder om Djupvik, den s.k. Ekstakusten, är otroligt vacker och inbjuder till härliga turer med bil,
+                        cykel eller till fots. Omedelbart norr om hamnen ligger en fin sandstrand som lämpar sig väl för
+                        bad.
+                    </p>
+                    <div class="artikelbild">
+                        <figure>
+                            <img src="../images/garngard-daniel.jpg" alt="Fiskarstugor i Djupvik bakom man som arbetar med fiskenät" />
+                            <figcaption>Fiskarstugor i genuin gammal fiskehamn</figcaption>
+                        </figure>
+                    </div>
+                    <div class="artikelbild">
+                        <figure>
+                            <img src="../images/stuff.jpg" alt="Kiosken i Djupvik" />
+                            <figcaption>Kiosken i Djupvik</figcaption>
+                        </figure>
+                    </div>
 
-        <figure>
-            <img src="../images/garngard-daniel.jpg" alt="Fiskarstugor i Djupvik bakom man som arbetar med fiskenät" />
-            <figcaption>Fiskarstugor i genuin gammal fiskehamn</figcaption>
-        </figure>
-        <figure>
-            <img src="../images/stuff.jpg" alt="Kiosken i Djupvik" />
-            <figcaption>Kiosken i Djupvik</figcaption>
-        </figure>
+                    <p>Från Djupviks hamn är det ca 2 nm ut till fågelön <a href="http://lillakarlso.org/">Lilla Karlsö</a>                        och ca 4 nm till
+                        <a href="http://storakarlso.se/">Stora Karlsö</a>. 250 m ovanför hamnen och fiskeläget finns <a href="http://www.djupvikhotel.com/">Djupviks hotell</a>.
+                        De erbjuder mat, dryck och logi.
+                        <br/><br/>
+                        <b>Djupvik är något som måste upplevas!</b></p>
+                </main>
+            </div>
+        </div>
+    </div>
 
-        <p>Från Djupviks hamn är det ca 2 nm ut till fågelön <a href="http://lillakarlso.org/">Lilla Karlsö</a> och ca 4 nm
-            till
-            <a href="http://storakarlso.se/">Stora Karlsö</a>. 250 m ovanför hamnen och fiskeläget finns <a href="http://www.djupvikhotel.com/">Djupviks hotell</a>.
-            De erbjuder mat, dryck och logi.
-            <br/>
-            <b>Djupvik är något som måste upplevas!</b></p>
-    </main>
-
-    <footer>
-
+    <footer class="sidfot">
+        <p>Är du medlem i hamnföreningen och inte har tillgång till medlemssidan? Skicka e-post till sekreteraren <a href="mailto:info@djupvikshamn.se">(info@djupvikshamn.se)</a></p>
     </footer>
 </body>
 

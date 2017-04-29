@@ -12,59 +12,76 @@
 <head>
     <title>Djupvik Harbour</title>
     <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="headerrubrik">
-            <h1>Djupvik</h1>
+    <header class="sidhuvud">
+        <div class="sidhuvudrubrik">
+            <h1><span class="sidhuvudrubriktext"><span class="sidhuvudrubrikmellanrum"></span>Djupvik</span>
+            </h1>
         </div>
-        <img src="../images/layout/header.png" alt="Sunset over the sea" />
+        <img src="../images/layout/header.png" alt="Solnedgång över havet" />
     </header>
-    <nav>
-        <a href="../index.html">Start</a>
-        <a href="info.html">Information</a>
-        <a href="guest.html">Gästplatser</a>
-        <a href="history.html">Historia</a>
-        <a href="contact.html">Kontakt</a>
-        <a href="members.html">Medlemsinfo</a>
-        <a href="english.html">In English</a>
+    <nav class="navigering">
+        <ul>
+            <li><a href="../index.html">Start</a></li>
+            <li><a href="info.html">Information</a></li>
+            <li><a href="guest.html">Gästplatser</a></li>
+            <li><a href="history.html">Historia</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="members.html">Medlemsinfo</a></li>
+            <li class="aktivnavigering"><a href="english.html">In English</a></li>
+        </ul>
     </nav>
 
-    <main>
-        <!--
+    <div class="innehall">
+        <div class="rad">
+            <div class="kolumn kolumn-1">
+                <aside>
+                    <div class="bildgalleri">
+                        <figure>
+                            <img src="../images/garngard-daniel.jpg" alt="Fisherman's cottages in Djupvik behind man repairing fishing nets" />
+                            <figcaption>Fisherman's cottages in genuine old fishing harbour</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../images/stuff.jpg" alt="Kiosk in Djupvik" />
+                            <figcaption>Kiosk in Djupvik</figcaption>
+                        </figure>
+                    </div>
+                </aside>
+            </div>
+            <div class="kolumn kolumn-2">
+                <main>
+                    <!--
         Här kör vi en kort sammanfattning på engelska. Vi vill gärna ha lite olika bilder samt någon
         “catchig” fras.
         -->
-        <p>The Port of Djupvik is located on the east coast of Gotland very close to the beautiful smaller island Lilla Karlsö.
-            Adjacent to the the port is a small and charming fishing- village which, during summer, comes to life with a
-            relaxed and welcoming buzz. Close by and situated with a fantastic view over the port is Djupviks Hotel, with
-            modern standard and with its own popular restaurant. Both the port and the fishing-village has a beautiful view
-            of two popular bird-islands called “Lilla Karlsö” and “Stora Karlsö”. The coastline south of Djupvik, called
-            “Ekstakusten” is incredibly beautiful and invites to nice scenery and views on foot, by bike or by car. North,
-            and connected to the port is a small sandy beach which is well soothed for a nice swim. The distance from the
-            port to Lilla Karlsö is about 2 nautical miles and it is about twice as long to Stora Karlsö (4nm).</p>
+                    <p>The Port of Djupvik is located on the east coast of Gotland very close to the beautiful smaller island
+                        Lilla Karlsö. Adjacent to the the port is a small and charming fishing- village which, during summer,
+                        comes to life with a relaxed and welcoming buzz. Close by and situated with a fantastic view over
+                        the port is Djupviks Hotel, with modern standard and with its own popular restaurant. Both the port
+                        and the fishing-village has a beautiful view of two popular bird-islands called “Lilla Karlsö” and
+                        “Stora Karlsö”. The coastline south of Djupvik, called “Ekstakusten” is incredibly beautiful and
+                        invites to nice scenery and views on foot, by bike or by car. North, and connected to the port is
+                        a small sandy beach which is well soothed for a nice swim. The distance from the port to Lilla Karlsö
+                        is about 2 nautical miles and it is about twice as long to Stora Karlsö (4nm).</p>
+                    <br/>
+                    <p>For more information, check out the websites:
+                        <a href="http://lillakarlso.org/">lillakarlso.org</a> and <a href="http://storakarlso.se/">storakarlso.se</a>.<br/>                        For information about Djupviks Hotel: <a href="http://www.djupvikhotel.com/">djupvikhotel.com</a>.<br/><br/>                        Are you interested of visiting Djupvik by boat? The 24 hour rate is 150 sek including key to the
+                        servicehouse and a 20 sek fee to the two showers. A connection to the electricity is an additional
+                        50 sek / 24 hour.<br/>Please contact the portmanager for more inquiries: Bo Lautin, cellnr:
+                        <span class="telefonnummer">+46 707 920310</span>
+                    </p>
 
-        <figure>
-            <img src="../images/garngard-daniel.jpg" alt="Fisherman's cottages in Djupvik behind man repairing fishing nets" />
-            <figcaption>Fisherman's cottages in genuine old fishing harbour</figcaption>
-        </figure>
-        <figure>
-            <img src="../images/stuff.jpg" alt="Kiosk in Djupvik" />
-            <figcaption>Kiosk in Djupvik</figcaption>
-        </figure>
+                </main>
+            </div>
+        </div>
+    </div>
 
-        <p>For more information, check out the websites:
-        <a href="http://lillakarlso.org/">lillakarlso.org</a> and <a href="http://storakarlso.se/">storakarlso.se</a>.<br/>
-        For information about Djupviks Hotel: <a href="http://www.djupvikhotel.com/">djupvikhotel.com</a>.<br/> Are you interested
-        of visiting Djupvik by boat? The 24 hour rate is 150 sek including key to the servicehouse and a 20 sek fee to the
-        two showers. A connection to the electricity is an additional 50 sek / 24 hour.<br/> Please contact the portmanager
-        for more inquiries: Bo Lautin, cellnr: <span class="telefonnummer">+46 707 920310</span></p>
-
-    </main>
-
-    <footer>
-
+    <footer class="sidfot">
+        <p>Är du medlem i hamnföreningen och inte har tillgång till medlemssidan? Skicka e-post till sekreteraren <a href="mailto:info@djupvikshamn.se">(info@djupvikshamn.se)</a></p>
     </footer>
 </body>
 

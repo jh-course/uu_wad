@@ -12,26 +12,35 @@
 <head>
     <title>Djupviks Hamn</title>
     <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="headerrubrik"><h1>Djupvik</h1></div>
-        <img src="../images/layout/header.png" alt="Solnedgång över havet"/>
+    <header class="sidhuvud">
+        <div class="sidhuvudrubrik">
+            <h1><span class="sidhuvudrubriktext"><span class="sidhuvudrubrikmellanrum"></span>Djupvik</span>
+            </h1>
+        </div>
+        <img src="../images/layout/header.png" alt="Solnedgång över havet" />
     </header>
-    <nav>
-        <a href="../index.html">Start</a>
-        <a href="info.html">Information</a>
-        <a href="guest.html">Gästplatser</a>
-        <a href="history.html">Historia</a>
-        <a href="contact.html">Kontakt</a>
-        <a href="members.html">Medlemsinfo</a>
-        <a href="english.html">In English</a>
+    <nav class="navigering">
+        <ul>
+            <li><a href="../index.html">Start</a></li>
+            <li><a href="info.html">Information</a></li>
+            <li><a href="guest.html">Gästplatser</a></li>
+            <li><a href="history.html">Historia</a></li>
+            <li class="aktivnavigering"><a href="contact.html">Kontakt</a></li>
+            <li><a href="members.html">Medlemsinfo</a></li>
+            <li><a href="english.html">In English</a></li>
+        </ul>
     </nav>
 
-    <main>
-
-        <!--
+    <div class="innehall">
+        <div class="rad">
+            <div class="kolumn kolumn-3">
+                <main>
+                    <!--
 Vi tänker oss ett formulär där användare kan skicka in frågor osv till oss.
 Sånt vi vill fråga:
 - Rubrik för ärendet.
@@ -42,26 +51,29 @@ Sånt vi vill fråga:
 - Mail
 Kanske att du kommer på något mer som är relevant?
 -->
-        <form>
-            <fieldset>
-                <legend>Kontaktinformation</legend>
-                <fieldset>
-                    <legend>Ärende</legend>
-                    <input type="text" placeholder="Ärenderubrik"/><br/>
-                    <textarea cols="50" rows="5" placeholder="Ärendebeskrivning"></textarea>
-                </fieldset>
-                <fieldset>
-                    <legend>Kontaktuppgifter</legend>
-                    <input type="email" placeholder="Email"/><br/>
-                    <input type="tel" placeholder="Telefon">
-                </fieldset>
-                <input type="submit" value="Skicka"/>
-            </fieldset>
-        </form>
-    </main>
+                    <form>
+                        <fieldset>
+                            <legend>Kontaktinformation</legend>
+                            <fieldset>
+                                <legend>Ärende</legend>
+                                <input type="text" placeholder="Ärenderubrik" /><br/>
+                                <textarea cols="50" rows="5" placeholder="Ärendebeskrivning"></textarea>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Kontaktuppgifter</legend>
+                                <input type="email" placeholder="Email" /><br/>
+                                <input type="tel" placeholder="Telefon">
+                            </fieldset>
+                            <input type="submit" value="Skicka" />
+                        </fieldset>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-
+    <footer class="sidfot">
+        <p>Är du medlem i hamnföreningen och inte har tillgång till medlemssidan? Skicka e-post till sekreteraren <a href="mailto:info@djupvikshamn.se">(info@djupvikshamn.se)</a></p>
     </footer>
 </body>
 
