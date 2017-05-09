@@ -43,6 +43,11 @@ table {
 	border-spacing: 0;
 }
 
+/* Sätt inramning som grundinställning för tabbning */
+:focus {
+    outline: dotted;
+}
+
 /* Låt sidan fylla hela viewporten */
 html, body {
     min-height: 100%;
@@ -152,6 +157,33 @@ h3 {
     font-weight: bold;
 }
 
+.kontaktformular, .inmatningsgrupp {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.inmatningsfaltgrupp {
+    display: flex;
+    flex-direction: column;
+}
+/* Kontaktformulär ska ha lika breda inmatningsfält
+   med ram som följer stilmallens färgsättningsriktlinjer */
+.inmatningsfalt {
+    width: 30em;
+    border: solid 1px #cdc9c5;
+}
+.inmatningstextruta {
+    height: 5em;
+}
+.inmatningsgrupp {
+    border: solid 2px #cdc9c5;
+}
+.inmatningsbeskrivning, .inmatningsknapp {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
 /* Definitioner för utseende och beteende för navigeringsmenyn
    Visa listan med navigeringsalternativ centrerat och horisontellt */
 .navigering {
@@ -162,13 +194,24 @@ h3 {
 }
 .navigering li {
     float: left;
+}
+/* Tabbning i menyn ska ha samma utseende som hovring*/
+.navigering li:hover, .navigering a:focus {
+    background-color: #cdc9c5;
+}
+.navigering a:focus {
+    outline: none;
+}
+/* Låt navigeringslänkarna visas med samma stil som
+   vanlig text och låt hela ytan vara klickbar */
+.navigering a:link, .navigering a:visited {
+    color: #1F1F1F;
+    text-decoration: none;
+    display: inline-block;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
-}
-.navigering li:hover {
-    background-color: #cdc9c5;
 }
 .aktivnavigering {
     border-bottom: solid #cdc9c5;

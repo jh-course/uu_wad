@@ -52,20 +52,30 @@ Sånt vi vill fråga:
 Kanske att du kommer på något mer som är relevant?
 -->
                     <form>
-                        <fieldset>
-                            <legend>Kontaktinformation</legend>
-                            <fieldset>
-                                <legend>Ärende</legend>
-                                <input type="text" placeholder="Ärenderubrik" /><br/>
-                                <textarea cols="50" rows="5" placeholder="Ärendebeskrivning"></textarea>
+                        <div class="kontaktformular">
+                            <fieldset class="inmatningsgrupp">
+                                <legend>Kontaktinformation</legend>
+                                <div class="inmatningsfaltgrupp">
+                                    <label class="inmatningsbeskrivning">Ärenderubrik</label>
+                                    <input class="inmatningsfalt" type="text" />
+                                </div>
+                                <div class="inmatningsfaltgrupp">
+                                    <label class="inmatningsbeskrivning">Ärendebeskrivning</label>
+                                    <textarea class="inmatningsfalt inmatningstextruta"></textarea>
+                                </div>
+                                <div class="inmatningsfaltgrupp">
+                                    <label class="inmatningsbeskrivning">Email</label>
+                                    <input class="inmatningsfalt" type="email" />
+                                </div>
+                                <div class="inmatningsfaltgrupp">
+                                    <label class="inmatningsbeskrivning">Telefon</label>
+                                    <input class="inmatningsfalt" type="tel">
+                                </div>
+                                <div class="inmatningsbeskrivning">
+                                    <input type="submit" value="Skicka" />
+                                </div>
                             </fieldset>
-                            <fieldset>
-                                <legend>Kontaktuppgifter</legend>
-                                <input type="email" placeholder="Email" /><br/>
-                                <input type="tel" placeholder="Telefon">
-                            </fieldset>
-                            <input type="submit" value="Skicka" />
-                        </fieldset>
+                        </div>
                     </form>
                 </main>
             </div>
