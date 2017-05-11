@@ -80,6 +80,11 @@ h3 {
     font-size: 120%;
 }
 
+/* Låt navigeringslänkarna visas med samma färg som vanlig text */
+a:link, a:visited {
+    color: #1F1F1F;
+}
+
 /* Centrera innehåll i navigering och sidfot */
 .navigering, .sidfot {
     margin: auto;
