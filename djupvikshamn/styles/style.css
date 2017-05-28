@@ -189,16 +189,24 @@ a:link, a:visited {
     padding-bottom: 5px;
 }
 
-/* Definitioner för utseende och beteende för navigeringsmenyn
-   Visa listan med navigeringsalternativ centrerat och horisontellt */
-.navigering {
+/* Definitioner för utseende och beteende för navigeringsmenyn.
+   Visa listan med navigeringsalternativ centrerat och horisontellt.
+   En klass navigeringbehallarefast är definierad för att fixera
+   menyn till toppen av sidan vid scrollning, kräver att klassen 
+   läggs till dynamiskt i DOMen till menybehållaren. */
+.navigeringbehallarefast {
+    position: fixed;
+}
+.navigeringbehallare {
     order: 2;
+    width: 100%;
+    background-color: #FFFFFF;
 }
 .navigering ul {
-    list-style: none;
+    text-align: center;
 }
 .navigering li {
-    float: left;
+    display: inline-block;
 }
 /* Tabbning i menyn ska ha samma utseende som hovring*/
 .navigering li:hover, .navigering a:focus {
