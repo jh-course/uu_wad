@@ -19,9 +19,14 @@
      */
     var hanteraMenyPositionVidScrollning = function () {
         if (document.body.scrollTop > window.meny.ursprungligMenyPosition) {
-            navigeringbehallare.className = "navigeringbehallare navigeringbehallarefast";
+            var menyhojd = window.meny.element.offsetHeight + "px";
+            window.meny.yttreelement.style.height = menyhojd;
+            window.meny.yttreelement.style.minHeight = menyhojd;
+
+            window.meny.element.className = "navigeringbehallare navigeringbehallarefast";
+
         } else if (document.body.scrollTop < window.meny.ursprungligMenyPosition) {
-            navigeringbehallare.className = "navigeringbehallare";
+            window.meny.element.className = "navigeringbehallare";
         }
     }
 
@@ -30,6 +35,7 @@
      */
     var sparaUtgangsvarden = function () {
         window.meny.element = document.getElementById("navigeringbehallare");
+        window.meny.yttreelement = document.getElementById("yttrenavigeringbehallare");
         window.meny.ursprungligMenyPosition = beraknaAbsolutTopPosition(window.meny.element);
     }
 

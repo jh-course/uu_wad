@@ -198,9 +198,15 @@ a:link, a:visited {
    läggs till dynamiskt i DOMen till menybehållaren. */
 .navigeringbehallarefast {
     position: fixed;
+    top: 0;
+    /* Lägg menyn över allt annat innehåll på sidan */
+    z-index: 1000;
+}
+.yttrenavigeringbehallare {
+    order: 2;
+    width: 100%;
 }
 .navigeringbehallare {
-    order: 2;
     width: 100%;
     background-color: #FFFFFF;
 }
@@ -291,9 +297,6 @@ a:link, a:visited {
 
 /* Stilregler för enheter motsvarande mobiltelefoner */
 @media(max-width: 767px) {
-    body {
-        border: 2px solid #6F0000;
-    }
 
 table, thead, tbody, th, td, tr {
     display: block;
@@ -344,7 +347,7 @@ thead tr {
     max-width: 95%;
     width: 95%;
 }
-
+/* Lägg bilderna på den engelska sidan sist */
 #rad-engelsk {
     flex-direction: column-reverse;
 }
@@ -359,9 +362,6 @@ thead tr {
 
 /* Stilregler för enheter motsvarande mobiltelefoner */
 @media(min-width: 768px) {
-    body {
-        border: 2px solid #006F00;
-    }
 
 .rad {
     flex-direction: column;
