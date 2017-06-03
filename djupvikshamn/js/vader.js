@@ -182,7 +182,7 @@
         };
 
         // Läs väderdata asynkront
-        req.open("GET", "http://opendata-download-metfcst.smhi.se/api/category/pmp2g/version/2/geotype/point/lon/18.1489/lat/57.3081/data.json", true);
+        req.open("GET", "https://opendata-download-metfcst.smhi.se/api/category/pmp2g/version/2/geotype/point/lon/18.1489/lat/57.3081/data.json", true);
         req.send();
     };
 
