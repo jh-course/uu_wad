@@ -130,11 +130,14 @@ a:link, a:visited {
 
 /* Skala bilder och bildtexter (i bildgalleri) till att fylla upp till 90%
    befintligt utrymme på bredden och behåll bredd- och höjdförhållande */
-.bildgalleri img {
+.bildgalleri img, .artikelbild img {
     display: block;
     margin: auto;
-    width: 90%;
+    max-width: 90%;    
+}
+.bildgalleri img {
     padding: 5px;
+    width: 90%
 }
 /* Centrera bild och bildtext i artikel 
    samt lägg lite mellanrum runt bilden */
@@ -175,7 +178,6 @@ a:link, a:visited {
 /* Kontaktformulär ska ha lika breda inmatningsfält
    med ram som följer stilmallens färgsättningsriktlinjer */
 .inmatningsfalt {
-    width: 30em;
     border: solid 1px #cdc9c5;
 }
 .inmatningstextruta {
@@ -261,8 +263,6 @@ a:link, a:visited {
 .rad {
     display: flex;
     margin: auto;
-    max-width: 80%;
-    width: 80%;
 }
 /* Generellt utseende och beteende för en kolumn */ 
 .kolumn {
@@ -287,4 +287,92 @@ a:link, a:visited {
 }
 .kolumn-3 {
     flex: 1;
+}
+
+/* Stilregler för enheter motsvarande mobiltelefoner */
+@media(max-width: 767px) {
+    body {
+        border: 2px solid #6F0000;
+    }
+
+table, thead, tbody, th, td, tr {
+    display: block;
+}
+
+/* Positionera utanför viewport för tillgänglighet */
+thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.medlemstabell tr, .medlemstabell td, .medlemstabell th {
+    border: solid 1px #cdc9c5;
+    padding: 5px;
+}
+.medlemstabell td {
+	position: relative;
+	padding-left: 50%;
+}
+.medlemstabell td:before {
+    position: absolute;
+    left: 6px;
+    white-space: nowrap;
+}
+
+/* Lägg till "header" till varje rad */
+.medlemstabell td:nth-of-type(1):before { 
+    content: "Förnamn"; 
+    }
+.medlemstabell td:nth-of-type(2):before {
+    content: "Efternamn"; 
+    }
+.medlemstabell td:nth-of-type(3):before {
+    content: "Bostadsaddress";
+    }
+.medlemstabell td:nth-of-type(4):before {
+    content: "Postnummer"; 
+    }
+.medlemstabell td:nth-of-type(5):before {
+    content: "Postaddress";
+    }
+
+.rad {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 95%;
+    width: 95%;
+}
+
+#rad-engelsk {
+    flex-direction: column-reverse;
+}
+
+/* Kontaktformulär ska ha lika breda inmatningsfält
+   med ram som följer stilmallens färgsättningsriktlinjer */
+.inmatningsfalt {
+    width: 15em;
+}
+
+}
+
+/* Stilregler för enheter motsvarande mobiltelefoner */
+@media(min-width: 768px) {
+    body {
+        border: 2px solid #006F00;
+    }
+
+.rad {
+    flex-direction: column;
+    max-width: 80%;
+    width: 80%;
+}
+
+/* Kontaktformulär ska ha lika breda inmatningsfält
+   med ram som följer stilmallens färgsättningsriktlinjer */
+.inmatningsfalt {
+    width: 30em;
+}
+
 }

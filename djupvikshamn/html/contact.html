@@ -12,6 +12,7 @@
 <head>
     <title>Djupviks Hamn</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content= "width = device-width, height = device-height" />
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <script src="../js/meny.js"></script>
@@ -59,20 +60,20 @@ Kanske att du kommer på något mer som är relevant?
                             <fieldset class="inmatningsgrupp">
                                 <legend>Kontaktinformation</legend>
                                 <div class="inmatningsfaltgrupp">
-                                    <label class="inmatningsbeskrivning">Ärenderubrik</label>
-                                    <input class="inmatningsfalt" type="text" />
+                                    <label for="arenderubrik" class="inmatningsbeskrivning">Ärenderubrik</label>
+                                    <input id="arenderubrik" class="inmatningsfalt" type="text" />
                                 </div>
                                 <div class="inmatningsfaltgrupp">
-                                    <label class="inmatningsbeskrivning">Ärendebeskrivning</label>
-                                    <textarea class="inmatningsfalt inmatningstextruta"></textarea>
+                                    <label for="arendebeskrivning" class="inmatningsbeskrivning">Ärendebeskrivning</label>
+                                    <textarea id="arendebeskrivning" class="inmatningsfalt inmatningstextruta"></textarea>
                                 </div>
                                 <div class="inmatningsfaltgrupp">
-                                    <label class="inmatningsbeskrivning">Email</label>
-                                    <input class="inmatningsfalt" type="email" />
+                                    <label for="email" class="inmatningsbeskrivning">Email</label>
+                                    <input id="email" class="inmatningsfalt" type="email" />
                                 </div>
                                 <div class="inmatningsfaltgrupp">
-                                    <label class="inmatningsbeskrivning">Telefon</label>
-                                    <input class="inmatningsfalt" type="tel">
+                                    <label for="telefon" class="inmatningsbeskrivning">Telefon</label>
+                                    <input id="telefon" class="inmatningsfalt" type="tel">
                                 </div>
                                 <div class="inmatningsbeskrivning">
                                     <input type="submit" value="Skicka" />

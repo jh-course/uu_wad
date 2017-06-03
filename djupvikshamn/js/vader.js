@@ -62,12 +62,12 @@
             "<td>" + new Date(klockslag).getHours() + "</td>" +
             "<td>" + temperatur + "</td>" +
             "<td>" +
-            "<style scoped=\"scoped\">" +
+            "<style>" +
             ".vader__vind { float: left }" +
-            ".vader__vindriktning { transform: rotate(" + vindriktning + "deg);}" +
+            ".vader__vindriktning-" + klockslag + " { transform: rotate(" + vindriktning + "deg);}" +
             "</style>" +
             "<div class=\"vader__vind\">" +
-            "<div class=\"vader__vindriktning\">" +
+            "<div class=\"vader__vindriktning-" + klockslag + "\">" +
             "<img src=\"../images/arrow-up.png\"/>" +
             "</div>" +
             "</div>" +
@@ -77,6 +77,28 @@
             "</tr>";
 
         return vaderbeskrivning;
+    }
+
+    /**
+     * Skapar en tabellrad för presentation av väderdata.
+     */
+    environment.getVaderTabellStyle = function getVaderTabellStyle() {
+        return "<style>" +
+            "@media(max-width: 767px) {" +
+            ".vader__tabell tr, .vader__tabell td, .vader__tabell th {border: solid 1px #cdc9c5; padding: 5px;}" +
+            ".vader__tabell td {position: relative; padding-left: 50%;}" +
+            ".vader__tabell td:before {position: absolute; left: 6px; white-space: nowrap;}" +
+            /* Lägg till "header" till varje rad */
+            ".vader__tabell td:nth-of-type(1):before {content: \"Klockan\";}" +
+            ".vader__tabell td:nth-of-type(2):before {content: \"Temperatur\";}" +
+            ".vader__tabell td:nth-of-type(3):before {content: \"Vind\";}" +
+            ".vader__tabell td:nth-of-type(4):before {content: \"Himmel\";}" +
+            "}" +
+            "@media(min-width: 768px) {" +
+            ".vader__tabell tr, .vader__tabell td, .vader__tabell th {border: solid 1px #cdc9c5; padding: 5px; text-align: left;}" +
+            ".vader__tabell th {border: solid 2px #cdc9c5;font-weight: bold;}" +
+            "}" +
+            "</style>";
     }
 
     /**
@@ -115,6 +137,8 @@
                 var imorgonMiddagparametrar = environment.getVaderParametrarForKlockslag(imorgonMiddag, vaderdata);
                 var imorgonKvallparametrar = environment.getVaderParametrarForKlockslag(imorgonKvall, vaderdata);
 
+                var vaderstyle = environment.getVaderTabellStyle();
+
                 /*
                 Konstruktion av HTML (och CSS) för väderpresentation.
 
@@ -125,32 +149,30 @@
 
                 var vaderbeskrivningIdag =
                     "<div>" +
-                    "<style scoped=\"scoped\">" +
-                    ".vader__tabell tr, .vader__tabell td, .vader__tabell th {border: solid 1px #cdc9c5; padding: 5px; text-align: left;}" +
-                    ".vader__tabell th {border: solid 2px #cdc9c5;font-weight: bold;}" +
-                    "</style>" +
+                    vaderstyle +
                     "<h2>Idag</h2>" +
                     "<table class=\"vader__tabell\">" +
-                    "<tr><th>Klockan</th><th>Temperatur</th><th>Vind</th><th>Himmel</th></tr>" +
+                    "<thead><tr><th>Klockan</th><th>Temperatur</th><th>Vind</th><th>Himmel</th></tr></thead>" +
+                    "<tgroup>" +
                     environment.skapaVaderPresentation(morgon, morgonparametrar) +
                     environment.skapaVaderPresentation(middag, middagparametrar) +
                     environment.skapaVaderPresentation(kvall, kvallparametrar) +
+                    "</tgroup>" +
                     "</table>" +
                     "</div>";
 
 
                 var vaderbeskrivningImorgon =
                     "<div>" +
-                    "<style scoped=\"scoped\">" +
-                    ".vader__tabell tr, .vader__tabell td, .vader__tabell th {border: solid 1px #cdc9c5; padding: 5px; text-align: left;}" +
-                    ".vader__tabell th {border: solid 2px #cdc9c5;font-weight: bold;}" +
-                    "</style>" +
+                    vaderstyle +
                     "<h2>Imorgon</h2>" +
                     "<table class=\"vader__tabell\">" +
-                    "<tr><th>Klockan</th><th>Temperatur</th><th>Vind</th><th>Himmel</th></tr>" +
+                    "<thead><tr><th>Klockan</th><th>Temperatur</th><th>Vind</th><th>Himmel</th></tr></thead>" +
+                    "<tgroup>" +
                     environment.skapaVaderPresentation(imorgonMorgon, imorgonMorgonparametrar) +
                     environment.skapaVaderPresentation(imorgonMiddag, imorgonMiddagparametrar) +
                     environment.skapaVaderPresentation(imorgonKvall, imorgonKvallparametrar) +
+                    "</tgroup>" +
                     "</table>" +
                     "</div>";
 
