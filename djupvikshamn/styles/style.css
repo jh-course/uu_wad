@@ -261,8 +261,7 @@ a:link, a:visited {
 /*
  * Definitioner nedanför för att skapa ett rutsystem
  */
- .rad, 
-.kolumn {
+.rad, .kolumn {
     margin: auto;
     box-sizing: border-box;
 }
@@ -341,9 +340,6 @@ thead tr {
     }
 
 .rad {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
     max-width: 95%;
     width: 95%;
 }
@@ -364,7 +360,6 @@ thead tr {
 @media(min-width: 768px) {
 
 .rad {
-    flex-direction: column;
     max-width: 80%;
     width: 80%;
 }
