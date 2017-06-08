@@ -27,6 +27,8 @@
 
         } else if (document.body.scrollTop < window.meny.ursprungligMenyPosition) {
             window.meny.element.className = "navigeringbehallare";
+            window.meny.yttreelement.style.height = "";
+            window.meny.yttreelement.style.minHeight = "";
         }
     }
 
@@ -36,11 +38,14 @@
     var sparaUtgangsvarden = function () {
         window.meny.element = document.getElementById("navigeringbehallare");
         window.meny.yttreelement = document.getElementById("yttrenavigeringbehallare");
-        window.meny.ursprungligMenyPosition = beraknaAbsolutTopPosition(window.meny.element);
+        window.meny.ursprungligMenyPosition = beraknaAbsolutTopPosition(window.meny.yttreelement);
     }
 
     /* Spara utgångsvärden då sidan laddas */
     window.addEventListener("load", sparaUtgangsvarden);
+
+    /* Uppdatera utgångsvärden då fönsterstorlek ändras */
+    window.addEventListener("resize", sparaUtgangsvarden);
 
     /* Lyssna på scroll event och anpassa positionen av menyn */
     window.addEventListener("scroll", hanteraMenyPositionVidScrollning);
